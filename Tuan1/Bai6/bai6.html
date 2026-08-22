@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng hợp Bài 6 - Form</title>
+    <style>
+        body {
+            background-color: white; 
+            font-family: "Times New Roman", Times, serif; 
+            padding: 20px;
+            font-size: 16px;
+        }
+        
+        .text-center { text-align: center; }
+        
+        .grid-options { display: flex; }
+        .grid-options > div { width: 200px; }
+
+        .section-title {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        /* ================= BÀI A: REGISTRATION FORM ================= */
+        .form-a-wrapper {
+            width: 650px;
+            border: 1px solid black;
+            background-color: #9bc6f9; 
+            padding: 20px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .form-a-wrapper .logo {
+            display: block;
+            margin: 0 auto 20px auto;
+        }
+
+        .form-a-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .form-a-table td {
+            padding: 6px 0;
+            vertical-align: top;
+        }
+
+        .form-a-table .label-col { width: 200px; }
+
+        .form-a-wrapper hr {
+            border: 0;
+            border-top: 1px solid #759cc5;
+            margin: 15px 0;
+        }
+
+        .form-a-wrapper .button-group {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .form-a-wrapper .button-group button {
+            padding: 4px 10px;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+        }
+
+        .custom-select {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 120px;
+            padding: 2px 5px;
+            border: 1px solid #7f9db9;
+            background: 
+                url('data:image/svg+xml;utf8,<svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg"><polyline points="40,50 70,80 100,50" stroke="%23333" fill="transparent" stroke-width="12"/></svg>') no-repeat right 2px center / 14px 14px,
+                linear-gradient(to bottom, #d6e8fa, #a0c9f1) no-repeat right top / 20px 100%,
+                white;
+        }
+
+        .form-a-wrapper input[type="radio"] {
+            accent-color: #62aa53;
+            width: 14px;
+            height: 14px;
+        }
+
+        /* ================= BÀI B: CONTACT US FORM ================= */
+        .form-b-wrapper {
+            border: 1px solid #7cb5ec;
+            padding: 15px;
+            width: 600px;
+        }
+
+        .form-b-wrapper h1 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .form-b-wrapper fieldset {
+            border: 1px solid #a0a0a0;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+
+        .form-b-wrapper legend {
+            padding: 0 5px;
+        }
+
+        .form-b-table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .form-b-table td {
+            padding: 5px;
+            vertical-align: top;
+        }
+
+        .form-b-table .label-col { width: 140px; }
+
+        /* ================= BÀI C: DATE FORM ================= */
+        .form-c-wrapper {
+            border: 1px solid #7cb5ec;
+            padding: 15px;
+            width: 250px;
+        }
+
+        .form-c-wrapper label {
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .form-c-wrapper input {
+            margin-bottom: 15px;
+        }
+
+        .form-c-wrapper input[type="text"],
+        .form-c-wrapper input[type="tel"],
+        .form-c-wrapper input[type="email"] {
+            width: 150px;
+        }
+
+        .form-c-wrapper .submit-btn-group {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==========================================
+         BÀI A: REGISTRATION FORM
+         ========================================== -->
+    <div class="section-title">a). Form1: Registration Form</div>
+    
+    <div class="form-a-wrapper">
+        <img src="C:\LETRUONGMYHOA_HOCKY1_2026-2027\2023_BTHTCNWeb_\Tuan678910\bt6.png" alt="Jackson Electronics" class="logo">
+
+        <h2 class="text-center" style="margin-bottom: 5px; font-size: 22px;">Registration Form</h2>
+        <p class="text-center" style="margin-top: 0; margin-bottom: 25px;">Register your Jackson Electronics product here</p>
+
+        <form action="#" method="POST">
+            <table class="form-a-table">
+                <tr>
+                    <td class="label-col">First Name:</td>
+                    <td>
+                        <input type="text" name="first_name" style="width: 150px;">
+                        &nbsp;&nbsp; Last Name: &nbsp;
+                        <input type="text" name="last_name" style="width: 150px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Address #1:</td>
+                    <td><input type="text" name="address1" style="width: 400px;"></td>
+                </tr>
+                <tr>
+                    <td class="label-col">Address #2:</td>
+                    <td><input type="text" name="address2" style="width: 400px;"></td>
+                </tr>
+                <tr>
+                    <td class="label-col">City:</td>
+                    <td>
+                        <input type="text" name="city" style="width: 150px;">
+                        &nbsp;&nbsp; State: &nbsp; <input type="text" name="state" style="width: 40px;">
+                        &nbsp;&nbsp; Zip: &nbsp; <input type="text" name="zip" style="width: 80px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Country:</td>
+                    <td><input type="text" name="country" value="United States" style="width: 180px;"></td>
+                </tr>
+            </table>
+
+            <hr>
+
+            <table class="form-a-table">
+                <tr>
+                    <td class="label-col">Product:</td>
+                    <td>
+                        <select name="product" class="custom-select">
+                            <option value="ScanMaster">ScanMaster</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Date Purchased:</td>
+                    <td><input type="text" name="date_purchased" style="width: 150px;"></td>
+                </tr>
+                <tr>
+                    <td class="label-col">Serial #:</td>
+                    <td><input type="text" name="serial_number" style="width: 150px;"></td>
+                </tr>
+                <tr>
+                    <td class="label-col">Used for:</td>
+                    <td>
+                        <div class="grid-options">
+                            <div>
+                                <input type="radio" name="used_for" value="Home" id="home"> <label for="home">Home</label><br>
+                                <input type="radio" name="used_for" value="Business" id="business" checked> <label for="business">Business</label><br>
+                                <input type="radio" name="used_for" value="Government" id="government"> <label for="government">Government</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="used_for" value="Educational" id="edu"> <label for="edu">Educational Institution</label><br>
+                                <input type="radio" name="used_for" value="Other" id="other_use"> <label for="other_use">Other</label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">System (check all that apply):</td>
+                    <td>
+                        <div class="grid-options">
+                            <div>
+                                <input type="checkbox" name="system" value="Windows" id="windows"> <label for="windows">Windows</label><br>
+                                <input type="checkbox" name="system" value="Macintosh" id="mac"> <label for="mac">Macintosh</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="system" value="UNIX" id="unix"> <label for="unix">UNIX</label><br>
+                                <input type="checkbox" name="system" value="Other" id="other_sys"> <label for="other_sys">Other</label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <hr>
+
+            <table class="form-a-table">
+                <tr>
+                    <td class="label-col">Comments?:</td>
+                    <td>
+                        <textarea name="comments" rows="4" style="width: 400px; resize: vertical;"></textarea>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="button-group">
+                <button type="submit">Click to register</button>
+                <button type="reset">Click to cancel</button>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- ==========================================
+         BÀI B: CONTACT US
+         ========================================== -->
+    <div class="section-title">b). Form: Contact Us</div>
+    
+    <div class="form-b-wrapper">
+        <h1>Contact Us</h1>
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Your message:</legend>
+                <table class="form-b-table">
+                    <tr>
+                        <td class="label-col">To</td>
+                        <td><input type="text" value="Example Cafe" style="width: 200px;"></td>
+                    </tr>
+                    <tr>
+                        <td class="label-col">Your email</td>
+                        <td><input type="email" style="width: 200px;"></td>
+                    </tr>
+                    <tr>
+                        <td class="label-col">Message</td>
+                        <td><textarea rows="7" style="width: 400px; resize: vertical;"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td class="label-col">Attach File</td>
+                        <td><input type="file"></td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset>
+                <legend>How you found us:</legend>
+                <table class="form-b-table">
+                    <tr>
+                        <td class="label-col">How did you hear of us</td>
+                        <td>
+                            <select style="width: 120px;">
+                                <option>Google</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label-col">Newsletter</td>
+                        <td>
+                            <input type="checkbox" id="newsletter" checked>
+                            <label for="newsletter">Ensure this box is checked if you would like to receive email updates</label>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <button type="submit" style="padding: 3px 10px;">Send message</button>
+        </form>
+    </div>
+
+
+    <!-- ==========================================
+         BÀI C: DATE
+         ========================================== -->
+    <div class="section-title">c). Form: Date</div>
+    
+    <div class="form-c-wrapper">
+        <form action="#" method="POST">
+            <label>Name:</label>
+            <input type="text" name="name">
+
+            <label>Telephone Number:</label>
+            <input type="tel" name="phone">
+
+            <label>Email:</label>
+            <input type="email" name="email">
+
+            <label>Favorite Color:</label>
+            <input type="color" name="color" value="#0000ff"> 
+
+            <label>Date of Birth:</label>
+            <input type="date" name="dob" value="2015-07-16">
+
+            <div class="submit-btn-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
