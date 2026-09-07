@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>All time list in central</title>
+    <style>
+        .outer-wrapper {
+            border: 1px solid #c0c0c0;
+            display: inline-block;
+            
+            padding-top: 5px;
+            padding-left: 10px;
+            padding-bottom: 10px;
+            padding-right: 0;
+            
+            font-family: "Times New Roman", Times, serif;
+            margin: 20px;
+        }
+
+        .table-title {
+            text-align: center;
+            margin-bottom: 4px;
+        }
+
+        .main-table {
+            border-collapse: collapse;
+            border: 3px solid #660066;
+        }
+
+        .main-table th, .main-table td {
+            border: 2px solid #888; 
+            padding: 4px 8px;
+        }
+
+        .main-table th {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .time-col {
+            font-weight: bold;
+            text-align: center;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="outer-wrapper">
+        <div class="table-title">All time list in central</div>
+        
+        <table class="main-table">
+            <tr>
+                <th>Time</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+            </tr>
+            <tr>
+                <td class="time-col">6:00</td>
+                <td colspan="7">National news</td>
+            </tr>
+            <tr>
+                <td class="time-col">6:30</td>
+                <td colspan="7">Local News</td>
+            </tr>
+            <tr>
+                <td class="time-col">7:00</td>
+                <td rowspan="2">Opera Fest</td>
+                <td rowspan="2">Radio U</td>
+                <td rowspan="2">Science</td>
+                <td rowspan="2">The living world</td>
+                <td>Word Play</td>
+                <td>Agri Week</td>
+                <td rowspan="2">Flok Fest</td>
+            </tr>
+            <tr>
+                <td class="time-col">7:30</td>
+                <td>Brain Stew</td>
+                <td>Bismark Forum</td>
+            </tr>
+            <tr>
+                <td class="time-col">8:00</td>
+                <td colspan="4" rowspan="4">The Class musical connection</td>
+                <td>Old time Radio</td>
+                <td rowspan="4">Saturday Nite Jazz</td>
+                <td rowspan="4">The Indie Connection</td>
+            </tr>
+            <tr>
+                <td class="time-col">8:30</td>
+                <td>The Inner Mind</td>
+            </tr>
+            <tr>
+                <td class="time-col">9:00</td>
+                <td>Open Mike Nite</td>
+            </tr>
+            <tr>
+                <td class="time-col">9:30</td>
+                <td>Relax</td>
+            </tr>
+            <tr>
+                <td class="time-col">10:00</td>
+                <td colspan="7">World News Feed</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>
